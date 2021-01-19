@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="150dp"
+            android:text="Collince Okeyo"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Enter Your Nickname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="CHANGE NICKNAME"
+            app:layout_constraintEnd_toEndOf="@+id/nickname"
+            app:layout_constraintStart_toStartOf="@+id/nickname"
+            app:layout_constraintTop_toBottomOf="@+id/nickname" />
+
+        <TextView
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/ic_baseline_star_24"
+            app:layout_constraintEnd_toEndOf="@+id/button"
+            app:layout_constraintStart_toStartOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+        <TextView
+            android:id="@+id/dear"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Dear unknown"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/star" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textSize="18sp"
+            android:text="DATA STRUCTURES AND ALGORITHMS
+            What This Book Is About
+This book is about data structures and algorithms as used in computer programming. Data structures are ways
+in which data is arranged in your computer’s memory (or stored on disk). Algorithms are the procedures a
+software program uses to manipulate the data in these structures.
+Almost every computer program, even a simple one, uses data structures and algorithms. For example,
+consider a program that prints address labels. The program might use an array containing the addresses to be
+printed, and a simple for loop to step through the array, printing each address.
+The array in this example is a data structure, and the for loop, used for sequential access to the array,
+executes a simple algorithm. For uncomplicated programs with small amounts of data, such a simple approach
+might be all you need. However, for programs that handle even moderately large amounts of data, or that
+solve problems that are slightly out of the ordinary, more sophisticated techniques are necessary. Simply
+knowing the syntax of a computer language such as Java or C++ isn’t enough.
+This book is about what you need to know after you’ve learned a programming language. The material we
+cover here is typically taught in colleges and universities as a second−year course in computer science, after a
+student has mastered the fundamentals of programming.
+What’s Different About This Book
+There are dozens of books on data structures and algorithms. What’s different about this one? Three things:
+• Our primary goal in writing this book is to make the topics we cover easy to understand.
+• Demonstration programs called Workshop applets bring to life the topics we cover, showing you
+step by step, with “moving pictures,” how data structures and algorithms work.
+• The example code is written in Java, which is easier to understand than C, C++, or Pascal, the
+languages traditionally used to demonstrate computer science topics.
+Let’s look at these features in more detail.
+Easy to Understand
+MWSS: Data Structures and Algorithms in Java:Introduction
+1Dividing a Program into Classes
+The array.java program essentially consisted of one big method. We can reap many benefits by dividing
+the program into classes. What classes? The data storage structure itself is one candidate, and the part of the
+program that uses this data structure is another. By dividing the program into these two classes we can clarify
+the functionality of the program, making it easier to design and understand (and in real programs to modify
+and maintain).
+In array.java we used an array as a data storage structure, but we treated it simply as a language element.
+Now we’ll encapsulate the array in a class, called LowArray. We’ll also provide class methods by which
+objects of other classes (the LowArrayApp class in this case) can access the array. These methods allow
+communication between LowArray and LowArrayApp.
+Our first design of the LowArray class won’t be entirely successful, but it will demonstrate the need for a
+better approach. The lowArray.java program in Listing 2.2 shows how it looks.Dividing a Program into Classes
+The array.java program essentially consisted of one big method. We can reap many benefits by dividing
+the program into classes. What classes? The data storage structure itself is one candidate, and the part of the
+program that uses this data structure is another. By dividing the program into these two classes we can clarify
+the functionality of the program, making it easier to design and understand (and in real programs to modify
+and maintain).
+In array.java we used an array as a data storage structure, but we treated it simply as a language element.
+Now we’ll encapsulate the array in a class, called LowArray. We’ll also provide class methods by which
+objects of other classes (the LowArrayApp class in this case) can access the array. These methods allow
+communication between LowArray and LowArrayApp.
+Our first design of the LowArray class won’t be entirely successful, but it will demonstrate the need for a
+better approach. The lowArray.java program in Listing 2.2 shows how it looks.What we’re going to do is insert the marked player in the appropriate place in the (partially) sorted group.
+However, to do this, we’ll need to shift some of the sorted players to the right to make room. To provide a
+space for this shift, we take the marked player out of line. (In the program this data item is stored in a
+temporary variable.) This is shown in Figure 3.11.b.
+Now we shift the sorted players to make room. The tallest sorted player moves into the marked player’s spot,
+the next−tallest player into the tallest player’s spot, and so on.
+When does this shifting process stop? Imagine that you and the marked player are walking down the line to
+the left. At each position you shift another player to the right, but you also compare the marked player with
+the player about to be shifted. The shifting process stops when you’ve shifted the last player that’s taller than
+the marked player. The last shift opens up the space where the marked player, when inserted, will be in sorted
+order. This is shown in Figure 3.11.c.
+Now the partially sorted group is one player bigger, and the unsorted group is one player smaller. The marker
+T−shirt is moved one space to the right, so it’s again in front of the leftmost unsorted player. This process is
+repeated until all the unsorted players have been inserted (hence the name insertion sort) into the appropriate
+place in the partially sorted group.
+THE INSERTSORT WORKSHOP APPLET
+Use the insertSort Workshop applet to demonstrate the insertion sort. Unlike the other sorting applets, it’s
+probably more instructive to begin with 100 random bars rather than 10.
+Sorting 100 Bars
+Change to 100 bars with the Size button, and click Run to watch the bars sort themselves before your very
+eyes. You’ll see that the short red outer arrow marks the dividing line between the partially sorted bars to
+the left and the unsorted bars to the right. The blue inner arrow keeps starting from outer and zipping to
+the left, looking for the proper place to insert the marked bar. Figure 3.12 shows how this looks when about"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dear" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
